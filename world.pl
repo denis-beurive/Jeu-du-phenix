@@ -105,7 +105,7 @@ sub toAsciiDoc
 		my $world = $inWorlds->[$level];
 		my $dimension = 0;
 		
-		push(@outWorlds, "|-----------------|");
+		# push(@outWorlds, "|-----------------|");
 		for (my $line=0; $line<3; $line++) {
 			my @textLine = ();
 			
@@ -125,22 +125,22 @@ sub toAsciiDoc
 
 
 print join("\n", toAsciiDoc(\@worlds));
-print "\n= Disjonct\n\n";
+print "\n# Disjonct\n\n";
 print join("\n", toAsciiDoc(\@worlds, \&disjonct));
-print "\n= Incompatible\n\n";
+print "\n# Incompatible\n\n";
 print join("\n", toAsciiDoc(\@worlds, \&incompatible));
-print "\n= responsive\n\n";
+print "\n# responsive\n\n";
 print join("\n", toAsciiDoc(\@worlds, \&responsive));
 
-print "\n= Composition: (disjonct o incompatible)(f)\n\n";
+print "\n# Composition: (disjonct o incompatible)(f)\n\n";
 print join("\n", toAsciiDoc(\@worlds, sub { my ($f) = @_; return disjonct(incompatible($f)); }) );
-print "\n= Composition: (incompatible o disjonct)(f)\n\n";
+print "\n# Composition: (incompatible o disjonct)(f)\n\n";
 print join("\n", toAsciiDoc(\@worlds, sub { my ($f) = @_; return incompatible(disjonct($f)); }) );
 
-print "\n= Composition: (disjonct o responsive)(f) and (responsive o disjonct)(f)\n\n";
+print "\n# Composition: (disjonct o responsive)(f) and (responsive o disjonct)(f)\n\n";
 print join("\n", toAsciiDoc(\@worlds, sub { my ($f) = @_; return disjonct(responsive($f)); }) );
 
-print "\n= Composition: (responsive o incompatible)(f) and (incompatible o responsive)(f)\n\n";
+print "\n# Composition: (responsive o incompatible)(f) and (incompatible o responsive)(f)\n\n";
 print join("\n", toAsciiDoc(\@worlds, sub { my ($f) = @_; return responsive(incompatible($f)); }) );
 
 
