@@ -124,24 +124,25 @@ sub toAsciiDoc
 	return @outWorlds;
 }
 
+print "\n\n= Result from world.pl\n\n";
 
 print join("\n", toAsciiDoc(\@worlds));
-print "\n\n= Disjonct\n\n";
+print "\n\n== Disjonct\n\n";
 print join("\n", toAsciiDoc(\@worlds, \&disjonct));
-print "\n\n= Incompatible\n\n";
+print "\n\n== Incompatible\n\n";
 print join("\n", toAsciiDoc(\@worlds, \&incompatible));
-print "\n\n= Responsive\n\n";
+print "\n\n== Responsive\n\n";
 print join("\n", toAsciiDoc(\@worlds, \&responsive));
 
-print "\n\n= Composition: (disjonct o incompatible)(f)\n\n";
+print "\n\n== Composition: (disjonct o incompatible)(f)\n\n";
 print join("\n", toAsciiDoc(\@worlds, sub { my ($f) = @_; return disjonct(incompatible($f)); }) );
-print "\n\n= Composition: (incompatible o disjonct)(f)\n\n";
+print "\n\n== Composition: (incompatible o disjonct)(f)\n\n";
 print join("\n", toAsciiDoc(\@worlds, sub { my ($f) = @_; return incompatible(disjonct($f)); }) );
 
-print "\n\n= Composition: (disjonct o responsive)(f) and (responsive o disjonct)(f)\n\n";
+print "\n\n== Composition: (disjonct o responsive)(f) and (responsive o disjonct)(f)\n\n";
 print join("\n", toAsciiDoc(\@worlds, sub { my ($f) = @_; return disjonct(responsive($f)); }) );
 
-print "\n\n= Composition: (responsive o incompatible)(f) and (incompatible o responsive)(f)\n\n";
+print "\n\n== Composition: (responsive o incompatible)(f) and (incompatible o responsive)(f)\n\n";
 print join("\n", toAsciiDoc(\@worlds, sub { my ($f) = @_; return responsive(incompatible($f)); }) );
 
 

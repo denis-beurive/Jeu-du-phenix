@@ -1,3 +1,7 @@
+
+
+= Result from world.pl
+
 |==================
 |   8 |   1 |   6 
 |   3 |   5 |   7 
@@ -20,8 +24,7 @@
 
 
 
-Disjonct
-========
+== Disjonct
 
 |==================
 |  -8 |  -1 |  -6 
@@ -45,8 +48,7 @@ Disjonct
 
 
 
-Incompatible
-========
+== Incompatible
 
 |==================
 |  18 |  25 |  20 
@@ -70,8 +72,7 @@ Incompatible
 
 
 
-Responsive
-========
+== Responsive
 
 |==================
 |   5 |  12 |   7 
@@ -95,8 +96,7 @@ Responsive
 
 
 
-Composition: (disjonct o incompatible)(f)
-========
+== Composition: (disjonct o incompatible)(f)
 
 |==================
 | -18 | -25 | -20 
@@ -120,8 +120,7 @@ Composition: (disjonct o incompatible)(f)
 
 
 
-Composition: (incompatible o disjonct)(f)
-========
+== Composition: (incompatible o disjonct)(f)
 
 |==================
 | -21 | -14 | -19 
@@ -145,8 +144,7 @@ Composition: (incompatible o disjonct)(f)
 
 
 
-Composition: (disjonct o responsive)(f) and (responsive o disjonct)(f)
-========
+== Composition: (disjonct o responsive)(f) and (responsive o disjonct)(f)
 
 |==================
 |  -5 | -12 |  -7 
@@ -170,8 +168,7 @@ Composition: (disjonct o responsive)(f) and (responsive o disjonct)(f)
 
 
 
-Composition: (responsive o incompatible)(f) and (incompatible o responsive)(f)
-========
+== Composition: (responsive o incompatible)(f) and (incompatible o responsive)(f)
 
 |==================
 |  21 |  14 |  19 
