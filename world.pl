@@ -105,7 +105,8 @@ sub toAsciiDoc
 		my $world = $inWorlds->[$level];
 		my $dimension = 0;
 		
-		# push(@outWorlds, "|-----------------|");
+		push(@outWorlds, "|     |     |     |");
+		push(@outWorlds, "|-----------------|");
 		for (my $line=0; $line<3; $line++) {
 			my @textLine = ();
 			
