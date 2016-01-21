@@ -118,6 +118,7 @@ sub toAsciiDoc
 			
 			push(@outWorlds, '|' . join(' |', @textLine) . ' |');
 		}
+		push(@outWorlds, "|==================");
 		push(@outWorlds, "\n");
 	}
 	return @outWorlds;
